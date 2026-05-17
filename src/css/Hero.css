@@ -1,0 +1,106 @@
+.hero-section {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-card {
+  border: 1.5px solid #f0f0f0;
+  border-radius: 16px;
+  padding: 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card__text {
+  flex: 1;
+  max-width: 400px;
+}
+
+.hero-card__heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  font-weight: 400;
+}
+
+.hero-card__tag {
+  margin-top: 32px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* Cube cluster — placeholder 3D visual */
+.hero-card__visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 260px;
+}
+
+.cube-cluster {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.cube {
+  position: absolute;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.cube--lg {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(135deg, #d4a020, #f5c842, #b8860b);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(10deg);
+  box-shadow: 0 8px 32px rgba(245, 200, 66, 0.3);
+}
+
+.cube--md {
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #2a2a2a, #444, #222);
+  border: 1px solid #555;
+}
+
+.cube--sm {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(135deg, #1e2a3a, #2e3f55, #162030);
+  border: 1px solid #3a4a5a;
+}
+
+.cube--tl { top: 10px; left: 0; transform: rotate(-15deg); }
+.cube--tr { top: 0; right: 10px; transform: rotate(20deg); }
+.cube--bl { bottom: 10px; left: 10px; transform: rotate(8deg); }
+.cube--br { bottom: 20px; right: 0; transform: rotate(-12deg); }
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px 24px;
+  }
+
+  .hero-card {
+    flex-direction: column;
+    padding: 40px 32px;
+    gap: 40px;
+  }
+
+  .hero-card__visual {
+    height: 180px;
+  }
+}

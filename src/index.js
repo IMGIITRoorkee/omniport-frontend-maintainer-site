@@ -4,7 +4,8 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
-import App from './components/app'
+import App from './components/App';
+import './css/index.css';
 import rootReducers from './reducers'
 
 export default class AppRouter extends Component {
@@ -18,7 +19,6 @@ export default class AppRouter extends Component {
     return (
       <Provider store={this.store}>
         <Route path={`${match.path}/`} component={App} />
-        {/* Default Route */}
       </Provider>
     )
   }

@@ -1,16 +1,56 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
-@import url('https://cdn.jsdelivr.net/npm/@typopro/web-bebas-neue@3.7.5/TypoPRO-BebasNeue.css');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+:root {
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --yellow: #f5c842;
+  --blue-card: #7b8cde;
+  --blue-card-bg: #a8b4f0;
+  --gray-border: #2a2a2a;
+  --text-muted: #888;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
 }
 
-.content-div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 0;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.app {
+  min-height: 100vh;
+}
+
+section {
+  padding: 5rem 3.75rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 48rem) {
+  section {
+    padding: 3.75rem 1.5rem;
+  }
 }
