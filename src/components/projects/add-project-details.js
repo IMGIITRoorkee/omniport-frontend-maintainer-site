@@ -212,6 +212,7 @@ class AddProjectDetails extends Component {
         width=1000px,height=500px,left=100px,top=100px`
     window.open(urlFileManager(), 'title', params)
     window.addEventListener('message', event => {
+      if (event.origin !== window.location.origin) return
       const { path, filemanager_name } = event.data
       const data = {
         path,

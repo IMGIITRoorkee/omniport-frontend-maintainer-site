@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { Route } from 'react-router-dom'
 import axios from 'axios'
+import DOMPurify from 'dompurify'
 import { Segment, Container, Loader, Icon } from 'semantic-ui-react'
 
 import NoMatch from '../404/404'
@@ -77,7 +78,7 @@ class ProjectDetailView extends Component {
               <div
                 align="left"
                 dangerouslySetInnerHTML={{
-                  __html: this.state.projects.longDescription,
+                  __html: DOMPurify.sanitize(this.state.projects.longDescription),
                 }}
               />
             <Segment basic />
